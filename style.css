@@ -1,0 +1,345 @@
+/* Reset Básico e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* --- Componente: Button --- */
+.button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button--primary {
+    background-color: #6a8b7c;
+    color: white;
+}
+
+.button--primary:hover {
+    background-color: #587468;
+    transform: translateY(-2px);
+}
+
+.button--secondary {
+    background-color: #8a9a91;
+    color: white;
+}
+
+.button--secondary:hover {
+    background-color: #798880;
+    transform: translateY(-2px);
+}
+
+.button--full-width {
+    width: 100%;
+}
+
+
+/* --- Bloco: Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #f4f4f4;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header__logo-img { /* Substitua com os seus ícones */
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* ESTILOS DA BARRA DE BUSCA ATUALIZADOS */
+.header__search {
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid #ccc;
+    padding-bottom: 4px;
+}
+
+.header__search-input {
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #333;
+    width: 250px;
+}
+
+.header__search-input:focus {
+    outline: none;
+}
+
+.header__search-input::placeholder {
+    color: #888;
+    font-weight: 500;
+}
+
+.header__search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 8px;
+}
+
+.header__search-icon { /* Substitua com os seus ícones */
+    width: 16px;
+    height: 16px;
+}
+
+.header__nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.header__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6a8b7c;
+    transition: width 0.3s;
+}
+
+.header__nav-link:hover::after {
+    width: 100%;
+}
+
+.header__login-button {
+    background: none;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__login-icon { /* Substitua com os seus ícones */
+    width: 20px;
+    height: 20px;
+}
+
+/* --- Bloco: Hero --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 5%;
+    gap: 40px;
+}
+
+.hero__text-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.hero__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero__button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.hero__image-container {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero__image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Bloco: Courses --- */
+.courses {
+    position: relative;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses__carousel {
+    display: flex;
+    gap: 30px;
+    width: calc(3 * 250px + 2 * 30px); /* 3 cards + 2 gaps */
+    justify-content: center;
+    align-items: center;
+}
+
+.courses__card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.courses__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.courses__card-icon-container {
+    width: 80px;
+    height: 80px;
+    background-color: #6a8b7c;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.courses__card-icon { /* Substitua com os seus ícones */
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Deixa o ícone branco */
+}
+
+.courses__card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.courses__arrow {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #888;
+    padding: 0 20px;
+    transition: color 0.3s;
+}
+
+.courses__arrow:hover {
+    color: #333;
+}
+
+/* --- Bloco: Modal --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal__content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal__close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal__title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form__input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}

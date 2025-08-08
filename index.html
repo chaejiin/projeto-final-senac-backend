@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juquinha - Aulas Particulares</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <img src="https://i.imgur.com/your-logo-image.png" alt="Logo Juquinha" class="header__logo-img">
+            <span class="header__logo-text">Juquinha</span>
+        </div>
+        
+        <form class="header__search" id="search-form">
+            <input type="text" id="search-input" class="header__search-input" placeholder="O QUE DESEJA APRENDER?">
+            <button type="submit" class="header__search-button" aria-label="Buscar">
+                <img src="https://i.imgur.com/your-search-icon.png" alt="Ícone de Busca" class="header__search-icon">
+            </button>
+        </form>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">HOME</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">SOBRE</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">AULAS</a></li>
+            </ul>
+        </nav>
+        <div class="header__login">
+            <button id="login-icon" class="header__login-button" aria-label="Abrir formulário de login">
+                <img src="./assets/img/login-de-usuario.png" alt="Ícone de Login" class="header__login-icon">
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero__text-container">
+                <h1 class="hero__title">Chega de “Quase”. É hora de Passar.</h1>
+                <p class="hero__subtitle">Transforme seu conhecimento, aulas particulares e de reforço escolar para todos os níveis e todos os bolsos.</p>
+                <div class="hero__button-container">
+                    <a href="opinioes.html" class="button button--primary">Opinião dos alunos</a>
+                    <button id="contact-button" class="button button--secondary">Contato</button>
+                </div>
+            </div>
+            <div class="hero__image-container">
+                <img src="https://educacao.sme.prefeitura.sp.gov.br/wp-content/uploads/2024/11/Professora-e-estudante-a-sala-de-aula-1.png" alt="Professor sorrindo em frente a um quadro negro" class="hero__image">
+            </div>
+        </section>
+
+        <section class="courses">
+            <button class="courses__arrow courses__arrow--left" id="prev-course" aria-label="Curso anterior">&#10094;</button>
+            <div class="courses__carousel">
+                </div>
+            <button class="courses__arrow courses__arrow--right" id="next-course" aria-label="Próximo curso">&#10095;</button>
+        </section>
+    </main>
+
+    <div id="login-modal" class="modal modal--hidden">
+        <div class="modal__content">
+            <button id="close-modal" class="modal__close-button" aria-label="Fechar formulário de login">&times;</button>
+            <h2 class="modal__title">Login</h2>
+            <form class="modal__form">
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="password" class="form__label">Senha</label>
+                    <input type="password" id="password" class="form__input" required>
+                </div>
+                <button type="submit" class="button button--primary button--full-width">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
