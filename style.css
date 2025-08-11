@@ -1,4 +1,4 @@
-/* Reset Básico e Configurações Globais */
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -67,13 +67,15 @@ body {
     font-weight: 700;
 }
 
-.header__logo-img { /* Substitua com os seus ícones */
-    width: 30px;
-    height: 30px;
+.header__logo-img {
+    width: 45px;
+    height: 45px;
     margin-right: 10px;
+
 }
 
-/* ESTILOS DA BARRA DE BUSCA ATUALIZADOS */
+
+/* ESTILOS DA BARRA DE BUSCA */
 .header__search {
     display: flex;
     align-items: center;
@@ -108,7 +110,7 @@ body {
     margin-left: 8px;
 }
 
-.header__search-icon { /* Substitua com os seus ícones */
+.header__search-icon {
     width: 16px;
     height: 16px;
 }
@@ -144,19 +146,25 @@ body {
 
 .header__login-button {
     background: none;
-    border: 2px solid #333;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    border: none;
+    border-radius: 0;/ width: auto;
+    height: auto;
     cursor: pointer;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header__login-icon { /* Substitua com os seus ícones */
-    width: 20px;
-    height: 20px;
+.header__login-icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s;
+}
+
+.header__login-button:hover .header__login-icon {
+    transform: scale(1.1);
+   
 }
 
 /* --- Bloco: Hero --- */
@@ -193,13 +201,14 @@ body {
 
 .hero__image-container {
     flex: 1;
-    max-width: 600px;
+    max-width: 500px; /* primeiro teste foi de 600px */
 }
+
 
 .hero__image {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Bloco: Courses --- */
@@ -214,7 +223,8 @@ body {
 .courses__carousel {
     display: flex;
     gap: 30px;
-    width: calc(3 * 250px + 2 * 30px); /* 3 cards + 2 gaps */
+    width: calc(3 * 250px + 2 * 30px);
+    /* 3 cards + 2 gaps */
     justify-content: center;
     align-items: center;
 }
@@ -230,14 +240,14 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .courses__card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .courses__card-icon-container {
@@ -251,10 +261,10 @@ body {
     margin-bottom: 20px;
 }
 
-.courses__card-icon { /* Substitua com os seus ícones */
+.courses__card-icon {
     width: 40px;
     height: 40px;
-    filter: brightness(0) invert(1); /* Deixa o ícone branco */
+    filter: brightness(0) invert(1);
 }
 
 .courses__card-title {
@@ -306,7 +316,7 @@ body {
     width: 90%;
     max-width: 400px;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .modal__close-button {
@@ -342,4 +352,103 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
+}
+
+/* FOOTER */
+
+.footer {
+   
+    background: #f4f4f4;
+    color: #333; 
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    text-align: center;
+}
+
+.footer__heading {
+    font-size: 1rem; /* 16px */
+    font-weight: 500;
+    color: #333; /* Cor do título escura */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 15px 0;
+}
+
+.footer__social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; 
+}
+
+.footer__social-icon {
+    width: 32px;
+    height: 32px;
+    /* IMPORTANTE: Removemos o filtro para que o ícone apareça em sua cor original (escura) */
+    transition: opacity 0.3s ease;
+}
+
+.footer__social-link:hover .footer__social-icon {
+    opacity: 0.7;
+}
+
+.footer__copyright {
+    font-size: 0.875rem; /* 14px */
+    color: #555; /* Cor de texto secundária para o copyright, como no subtítulo do hero */
+    margin: 0 0 15px 0;
+}
+
+.footer__legal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px 20px; 
+}
+
+.footer__legal-link {
+    color: #333; /* Cor de link padrão escura */
+    text-decoration: none;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Links continuam usando a cor primária do site no hover para manter a consistência */
+.footer__legal-link:hover {
+    color: #6a8b7c; 
+}
+
+/* Separador com um cinza sutil */
+.footer__legal-item:not(:last-child)::after {
+    content: '|';
+    color: #aaa;
+    margin-left: 20px;
+    pointer-events: none; 
+}
+
+
+@media (max-width: 480px) {
+    .footer__legal-list {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    
+    .footer__legal-item:not(:last-child)::after {
+        content: ''; 
+        margin-left: 0;
+    }
 }

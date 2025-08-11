@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'courses__card';
             card.innerHTML = `
                 <div class="courses__card-icon-container">
-                     <img src="https://i.imgur.com/your-paperplane-icon.png" alt="Ícone de Avião de Papel" class="courses__card-icon">
+                     <img src="./assets/img/giz-de-cera.png" alt="Ícone de Avião de Papel" class="courses__card-icon">
                 </div>
                 <h3 class="courses__card-title">${courseName}</h3>
             `;
